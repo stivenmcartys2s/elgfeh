@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telas Peso Shop | Tu Destino para Telas de Calidad (MXN)</title>
+    
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #00796b; /* Color verde azulado representativo de frescura */
+            color: white;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo a {
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 25px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #ffcc80; /* Tono naranja claro para el hover */
+        }
+        
+        /* Sección Principal (Hero) */
+        .hero {
+            background-image: url('https://via.placeholder.com/1500x500/004d40/ffffff?text=Telas+Peso+Shop+-+Tu+Lienzo+Creativo');
+            background-size: cover;
+            background-position: center;
+            height: 450px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            flex-direction: column;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 22px;
+            margin-top: 0;
+        }
+        .hero button {
+            padding: 12px 30px;
+            margin-top: 25px;
+            font-size: 18px;
+            border: none;
+            background-color: #ffcc80;
+            color: #333;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .hero button:hover {
+            background-color: #ffb74d;
+        }
+
+        /* Sección de Productos */
+        .products {
+            padding: 60px 40px;
+            text-align: center;
+        }
+        .products h2 {
+            font-size: 36px;
+            color: #00796b;
+            margin-bottom: 40px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .product-item {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            text-align: left;
+        }
+        .product-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+        .product-info {
+            padding: 20px;
+        }
+        .product-info h3 {
+            margin-top: 0;
+            color: #004d40;
+        }
+        .product-info .price {
+            font-size: 22px;
+            color: #d32f2f; /* Color rojo para destacar el precio */
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .product-info button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #ff8a65; /* Tono salmón para el botón */
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        .product-info button:hover {
+            background-color: #ff7043;
+        }
+
+        /* Pie de Página (Footer) */
+        footer {
+            background-color: #333;
+            color: #ccc;
+            padding: 40px 40px;
+            font-size: 14px;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            text-align: left;
+        }
+        .footer-section {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+        .footer-section h4 {
+            color: white;
+            border-bottom: 1px solid #555;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-section ul li a {
+            color: #ccc;
+            text-decoration: none;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="#">Telas Peso Shop</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Algodones</a></li>
+                <li><a href="#">Linos & Sedas</a></li>
+                <li><a href="#">Tapicería</a></li>
+                <li><a href="#">Contacto</a></li>
+                </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Telas Peso Shop</h1>
+        <p>Calidad Premium al Mejor Precio en **Pesos Mexicanos (MXN)**</p>
+        <button onclick="document.getElementById('productos-destacados').scrollIntoView()">Ver Telas Destacadas</button>
+    </section>
+
+    <section id="productos-destacados" class="products">
+        <h2>Nuestra Colección Más Vendida</h2>
+        <div class="product-grid">
+
+            <div class="product-item">
+                <img src="https://via.placeholder.com/350x250/f06292/ffffff?text=Algodon+Estampado" alt="Tela de Algodón Estampado Floral">
+                <div class="product-info">
+                    <h3>Algodón Popelina Estampado Floral</h3>
+                    <p>Tela suave y ligera, ideal para blusas y vestidos de verano.</p>
+                    <div class="price">
+                        $145.00 MXN / metro
+                    </div>
+                    <button>Añadir al Carrito</button>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <img src="https://via.placeholder.com/350x250/bcaaa4/ffffff?text=Lino+Natural" alt="Tela de Lino Natural">
+                <div class="product-info">
+                    <h3>Lino Belga 100% Natural</h3>
+                    <p>Textura rústica, perfecta para ropa elegante y mantelería.</p>
+                    <div class="price">
+                        $290.00 MXN / metro
+                    </div>
+                    <button>Añadir al Carrito</button>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <img src="https://via.placeholder.com/350x250/4db6ac/ffffff?text=Terciopelo+Verde" alt="Tela de Terciopelo para Tapicería">
+                <div class="product-info">
+                    <h3>Terciopelo de Algodón Anti-manchas</h3>
+                    <p>Alta resistencia, ideal para tapizar muebles y cojines de lujo.</p>
+                    <div class="price">
+                        $380.00 MXN / metro
+                    </div>
+                    <button>Añadir al Carrito</button>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <img src="https://via.placeholder.com/350x250/ffe082/333333?text=Manta+Cruda" alt="Tela de Manta Cruda">
+                <div class="product-info">
+                    <h3>Manta Cruda (Muselina)</h3>
+                    <p>Básica para manualidades, forros y proyectos artesanales.</p>
+                    <div class="price">
+                        $75.00 MXN / metro
+                    </div>
+                    <button>Añadir al Carrito</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Ofertas de la Semana</a></li>
+                    <li><a href="#">Cómo Comprar</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Ayuda</h4>
+                <ul>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                    <li><a href="#">Política de Devolución</a></li>
+                    <li><a href="#">Aviso de Privacidad</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <p>Tel: (55) 1234 5678</p>
+                <p>Email: <a href="mailto:contacto@telaspesoshop.com" style="color: #ffcc80;">contacto@telaspesoshop.com</a></p>
+                <p>Redes Sociales (Íconos)</p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 20px; border-top: 1px solid #555; padding-top: 15px;">
+            &copy; 2025 Telas Peso Shop. Precios en Pesos Mexicanos (MXN).
+        </div>
+    </footer>
+
+</body>
+</html>
